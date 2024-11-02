@@ -1,0 +1,940 @@
+/* Fonts */
+@font-face {
+  font-family: "Montserrat_bold";
+  src: url("../fonts/Montserrat-Bold.eot");
+  src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat-Bold.ttf") format("truetype"),
+    url("../fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat_reg";
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular.ttf") format("truetype"),
+    url("../fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat_med";
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff"),
+    url("../fonts/Montserrat-Medium.ttf") format("truetype"),
+    url("../fonts/Montserrat-Medium.svg#Montserrat-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTFirsNeueTrl_reg";
+  src: url("../fonts/TTFirsNeueTrl-Regular.eot");
+  src: url("../fonts/TTFirsNeueTrl-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/TTFirsNeueTrl-Regular.woff2") format("woff2"),
+    url("../fonts/TTFirsNeueTrl-Regular.woff") format("woff"),
+    url("../fonts/TTFirsNeueTrl-Regular.ttf") format("truetype"),
+    url("../fonts/TTFirsNeueTrl-Regular.svg#TTFirsNeueTrl-Regular")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  box-sizing: border-box;
+}
+/* Colors */
+/* SETTINGS */
+button,
+input,
+a {
+  outline: none;
+  background: transparent;
+}
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
+.button {
+  color: #fff;
+  font-family: "TTFirsNeueTrl_reg", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 45px;
+  border: 0.2rem solid #fff;
+}
+/* STYLE */
+html {
+  height: 100%;
+  font-size: 10px;
+  text-align: center;
+  font-family: "TTFirsNeueTrl_reg", sans-serif;
+}
+.p {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  height: 100%;
+}
+
+body {
+  background: -webkit-gradient(
+      linear,
+      right top,
+      left bottom,
+      from(#e1741c),
+      color-stop(#da1505),
+      color-stop(#da0c47),
+      to(#da00c2)
+    )
+    no-repeat;
+  background: linear-gradient(
+      to bottom left,
+      #e1741c,
+      #da1505,
+      #da0c47,
+      #da00c2
+    )
+    no-repeat;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  min-width: 320px;
+}
+.container {
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+}
+.subtitle {
+  z-index: 10;
+  text-align: center;
+  font-family: "TTFirsNeueTrl_reg", sans-serif;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 7rem;
+}
+.page {
+  height: 100%;
+}
+.offer {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 100%;
+  bottom: 0rem;
+  z-index: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: url(../img/logo.png) center no-repeat;
+  background-size: 100%;
+}
+/*Стили для странички с регистрацией*/
+.top {
+  padding-top: 10rem;
+  z-index: 20;
+}
+.avatar {
+  width: 7rem;
+  height: 7rem;
+  background: url(..img\user.png) center no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+  margin-bottom: 6rem;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.input_field {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 20;
+  color: #000;
+  border-radius: 45px;
+  background-color: #fff;
+  width: 70%;
+  height: 4.6rem;
+
+  margin-top: 0.5rem;
+  border: 0.2rem solid #fff;
+}
+.remember_me {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  z-index: 20;
+  color: #fff;
+
+  .remember_me input,
+  p {
+    display: inline-block;
+  }
+}
+.link_on_sing_in {
+  color: #fff;
+  text-decoration: none;
+}
+
+/**/
+
+.start {
+  width: 100%;
+  height: 5.6rem;
+  letter-spacing: 1px;
+  margin-top: 56rem;
+}
+
+#Page2 {
+  background: #fff;
+  display: none;
+}
+#Page2 .top {
+  margin-bottom: -1px;
+  height: 55%;
+  width: 100%;
+  padding-top: 4rem;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#de4411),
+    to(#e1751d)
+  );
+  background: linear-gradient(to bottom left, #de4411, #e1751d);
+}
+#Page2 .top .bg {
+  height: 100%;
+  width: 100%;
+  background: url(../img/SVG/testlogo.svg) bottom no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#Page2 .top .bg .p2mc {
+  height: 37%;
+  width: 37%;
+}
+.real-radio {
+  display: none;
+}
+.fake-radio {
+  width: 10rem;
+  height: 4rem;
+  background-color: #000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "TTFirsNeueTrl_reg", sans-serif;
+  display: inline-block;
+}
+.fake-radio P {
+  color: #fff;
+}
+.wrap {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.wrap-block {
+  font-size: 1.5rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.woman {
+  border-radius: 18px 18px 3px 18px;
+}
+@media (hover: hover) {
+  .man:hover {
+    border-radius: 18px 3px 18px 18px;
+    cursor: pointer;
+    background-color: #333333;
+  }
+  .woman:hover {
+    border-radius: 18px 18px 3px 18px;
+    cursor: pointer;
+    background-color: #333333;
+  }
+}
+@media (hover: none) {
+  .man:active {
+    border-radius: 18px 3px 18px 18px;
+    cursor: pointer;
+    background-color: #333333;
+  }
+  .woman:active {
+    border-radius: 18px 18px 3px 18px;
+    cursor: pointer;
+    background-color: #333333;
+  }
+}
+.man {
+  border-radius: 18px 3px 18px 18px;
+}
+.page2-main {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 6rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.page2-main form {
+  width: 24rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page2-main .wo-or-man {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.page2-main .question {
+  font-size: 2rem;
+}
+.mask {
+  height: 27rem;
+}
+.farther {
+  border-color: #da1f07;
+  color: #da1f07;
+  height: 5.6rem;
+  width: 95%;
+}
+.points {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+}
+.points .point {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100px;
+  background-color: #acacc1;
+  border: 0.2rem solid #acacc1;
+}
+.points .active {
+  background-color: #da1f07;
+  border: 0.2rem solid #da1f07;
+}
+#Page3 {
+  min-width: 320px;
+  height: 100%;
+  background-color: #fff;
+}
+#Page3 .top {
+  margin-bottom: -1px;
+  height: 55%;
+  width: 100%;
+  padding-top: 0rem;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#db1219),
+    to(#de4411)
+  );
+  background: linear-gradient(to bottom left, #db1219, #de4411);
+}
+#Page3 .top .bg {
+  height: 100%;
+  width: 100%;
+  background: url(../img/SVG/p3bg.svg) bottom no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#Page3 .top .bg .p2mc {
+  height: 50%;
+  width: 50%;
+}
+#Page3 .years {
+  font-size: 2rem;
+}
+#Page3 .age {
+  padding: 0.2rem 1rem;
+  border-color: #da1f07;
+  bottom: none;
+  width: 82%;
+  border-radius: 100px;
+  height: 3rem;
+}
+#Page4 {
+  min-width: 320px;
+  height: 100%;
+  background-color: #fff;
+}
+#Page4 .top {
+  margin-bottom: -1px;
+  height: 55%;
+  width: 100%;
+  padding-top: 1rem;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#db03a9),
+    to(#db1219)
+  );
+  background: linear-gradient(to bottom left, #db03a9, #db1219);
+}
+#Page4 .top .bg {
+  height: 100%;
+  width: 100%;
+  background: url(../img/SVG/p4bg.svg) bottom no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#Page4 .page2-main .quest-budget {
+  font-size: 2rem;
+}
+#Page4 .page2-main .range .budget {
+  width: 85%;
+  -webkit-appearance: none;
+  height: 3px;
+  background: #acacc1;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+#Page4 .page2-main .range .budget::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 17px;
+  width: 17px;
+  background: #da1f07;
+  border-radius: 50%;
+  border: 1px solid #da1f07;
+  cursor: pointer;
+}
+#Page4 .page2-main .range .price {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 40%;
+  justify-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+#Page4 .page2-main .range .price-null {
+  color: #acacc1;
+  width: 30%;
+}
+#Page4 .page2-main .range .price-max {
+  color: #acacc1;
+  width: 40%;
+}
+#choice {
+  min-width: 320px;
+  height: 100%;
+  background-color: #fff;
+}
+#choice .settings {
+  font-family: "Montserrat_bold", sans-serif;
+  font-size: 1.7rem;
+  border: none;
+  color: #da1f07;
+  background: #fff;
+  border: 3px solid #da1f07;
+  height: 5.6rem;
+  width: 24rem;
+}
+#choice .page2-main {
+  position: absolute;
+  bottom: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+#choice .wooshbtn {
+  font-family: "Montserrat_bold", sans-serif;
+  font-size: 1.7rem;
+  border: none;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    from(#da0c47),
+    to(#de5314)
+  );
+  background: linear-gradient(to top right, #da0c47, #de5314);
+  height: 5.6rem;
+  width: 24rem;
+}
+#choice .top {
+  margin-bottom: -1px;
+  height: 55%;
+  width: 100%;
+  padding-top: 1rem;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#db03a9),
+    to(#db1219)
+  );
+  background: linear-gradient(to bottom left, #7e03c6, #db03a9);
+}
+#choice .top .bg {
+  height: 100%;
+  width: 100%;
+  background: url(../img/SVG/p-choise-bg.svg) bottom no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#Page5 {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  text-align: center;
+}
+#Page5 .farther {
+  width: 83%;
+}
+#Page5 p {
+  margin: 0;
+  padding: 0;
+}
+#Page5 .container5 {
+  display: inline-block;
+  margin-top: 4rem;
+  width: 32rem;
+}
+#Page5 .search {
+  display: inline-block;
+  width: 83%;
+  margin: 2rem 0;
+}
+#Page5 .search_box {
+  width: 97%;
+}
+#Page5 .search_box_input {
+  border: none;
+  margin: 0;
+  padding: 3px;
+  width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: #fff;
+}
+#Page5 .name {
+  display: inline-block;
+  width: 82%;
+  font-size: 3rem;
+  color: #fff;
+}
+#Page5 .name .thin {
+  text-align: left;
+  font-family: "Montserrat_reg", sans-serif;
+}
+#Page5 .name .bold {
+  text-align: left;
+  font-family: "Montserrat_bold", sans-serif;
+}
+#Page5 .filters {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  height: 32rem;
+  top: 0.5vh;
+}
+#Page5 .filters .filters_row {
+  max-width: 90%;
+  width: 83%;
+  height: 12.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Page5 .filters .filters_row .filters_element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 500;
+  padding-bottom: 0.3vh;
+}
+#Page5 .filters .filters_row .filters_element .filters_element.element1 {
+  font-family: "Montserrat_med", sans-serif;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 15px 5px 1px;
+  padding: 10px 16px;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#Page5 .filters .filters_row .filters_element #bithday {
+  border-radius: 4px 15px;
+  padding: 10px 25px;
+}
+#Page5 .filters .filters_row .filters_element #new_year {
+  border-radius: 15px 4px 15px 15px;
+  padding: 10px 25px;
+}
+#Page5 .filters .filters_row .filters_element #girl {
+  border-radius: 15px 15px 15px 4px;
+}
+#Page5 .filters .filters_row .filters_element #partner {
+  border-radius: 15px 15px 4px 15px;
+}
+#Page5 .filters .filters_row .filters_element #wedding {
+  border-radius: 4px 15px 15px 15px;
+}
+#Page5 .filters .filters_row .filters_element #girlfriend {
+  border-radius: 15px 15px 4px 15px;
+  padding: 10px 25px;
+}
+#Page5 .filters .filters_row .filters_element #gift_wrap {
+  border-radius: 15px 15px 15px 4px;
+  padding: 10px 25px;
+}
+#Page5 .filters .filters_row .filters_element #unuisual {
+  border-radius: 15px 4px 15px 15px;
+  padding: 10px 34px;
+}
+#Page5 .filters .filters_row .filters_element #classmates {
+  border-radius: 4px 15px;
+  padding: 10px 34px;
+}
+#Page5 .filters .filters_row .filters_element #memorable {
+  border-radius: 15px 15px 15px 4px;
+  padding: 10px 21px;
+}
+#Page5 .filters .filters_row .filters_element #anniversary {
+  border-radius: 15px 15px 4px 15px;
+  padding: 10px 21px;
+}
+#Page5 .filters .filters_row .filters_element #daughter {
+  border-radius: 15px 15px 4px 15px;
+  padding: 10px 23px;
+}
+#Page5 .filters .filters_row .filters_element #woman_day {
+  border-radius: 4px 15px 15px 15px;
+  padding: 10px 23px;
+}
+#Page5 .filters .filters_row .filters_element #friend {
+  border-radius: 15px 4px 15px 15px;
+  padding: 10px 23px;
+}
+#Page5 .filters .filters_row .filters_element #emotional {
+  border-radius: 15px 15px 4px 15px;
+  padding: 10px 25px;
+}
+#Page5 .filters .filters_row .filters_element #useful {
+  border-radius: 15px 4px 15px 15px;
+  padding: 10px 25px;
+}
+#Page6 {
+  background: #000;
+}
+#Page6 .container {
+  margin-top: 4rem;
+  height: auto;
+  text-align: center;
+}
+#Page6 .name {
+  font-size: 3rem;
+  color: #fff;
+  text-align: left;
+}
+#Page6 .name .thin {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat_reg", sans-serif;
+}
+#Page6 .name .bold {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat_bold", sans-serif;
+}
+#Page6 .input {
+  margin-top: 3rem;
+  width: 100%;
+  height: 50%;
+}
+#Page6 .input-text {
+  padding: 1rem;
+  bottom: none;
+  width: 90%;
+  height: 15rem;
+  resize: none;
+  color: #fff;
+  background-color: #000;
+  border-radius: 30px 7px;
+  border: 0.3rem solid #fff;
+}
+#Page6 .wooshbtn {
+  position: absolute;
+  bottom: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Montserrat_bold", sans-serif;
+  font-size: 1.7rem;
+  border: none;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    from(#da0c47),
+    to(#de5314)
+  );
+  background: linear-gradient(to top right, #da0c47, #de5314);
+  height: 5.6rem;
+  width: 24rem;
+  margin-top: 10rem;
+}
+
+/* #Gifts {
+  width: 100%;
+  font-family: "Montserrat_reg", sans-serif;
+}
+
+.rotateBackground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+}
+.rotateBackground img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#containerForGifts {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  position: relative;
+  width: 260px;
+  height: 60px;
+  background: #fff;
+  border-radius: 60px;
+  transition: 0.5s;
+}
+.search .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+}
+.search .icon::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 3px solid #333333;
+  border-radius: 50%;
+  transform: translate(-2px, -2px);
+}
+.search .icon::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background: #333333;
+  transform: translate(8px, 8px) rotate(-45deg);
+}
+.search.active {
+  width: 260px;
+} */
+/* #Gifts {
+  background: #000;
+  width: 100%;
+}
+
+#Gifts .container {
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+}
+#Gifts p {
+  font-family: "Montserrat_bold", sans-serif;
+  text-align: left;
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+#Gifts .gifts {
+  border-radius: 10px;
+  border: 2px solid #fff;
+  height: 70%;
+} */
+#Gifts {
+  background: #000;
+  height: 100%;
+}
+#Gifts .container {
+  text-align: center;
+  display: inline-block;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+}
+#Gifts p {
+  font-family: "Montserrat_bold", sans-serif;
+  text-align: left;
+  color: #fff;
+  font-size: 3.2rem;
+  margin: 0;
+}
+#Gifts .name {
+  margin: 4rem 0;
+}
+#Gifts .thin {
+  font-family: "Montserrat_reg", sans-serif;
+  margin-bottom: 5px;
+}
+#Gifts .bold {
+  line-height: 30px;
+}
+#Gifts .gifts {
+  padding: 2rem;
+  border-radius: 30px 2px;
+  border: 2px solid #fff;
+  height: 40%;
+}
+/* #Gifts #gift_name {
+  font-family: "Montserrat_reg", sans-serif;
+  font-size: 3.5rem;
+} */
+#Gifts #gift_description {
+  font-family: "Montserrat_reg", sans-serif;
+  font-size: 2rem;
+}
+#Gifts .wooshbtn {
+  font-family: "Montserrat_bold", sans-serif;
+  font-size: 1.7rem;
+  margin-top: 4em;
+  border: none;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    from(#da0c47),
+    to(#de5314)
+  );
+  color: #fff;
+  border-radius: 40px;
+  background: linear-gradient(to top right, #da0c47, #de5314);
+  height: 5.6rem;
+  width: 24rem;
+}
+#Page1 {
+  display: none;
+}
+#Page2 {
+  display: none;
+}
+#Page3 {
+  display: none;
+}
+#Page4 {
+  display: none;
+}
+#Page5 {
+  display: none;
+}
+#Page6 {
+  display: none;
+}
+#registration {
+  /*display: none;*/
+}
+#choice {
+  display: none;
+}
+#Gifts {
+  display: none;
+}

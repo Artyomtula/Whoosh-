@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
+    
+    <title>Woosh</title>
+</head>
+<body id="body">
+    <div class="page" id="registration">
+        <div class="top">
+            <div class="avatar"></div>
+            <form>
+                <div class="log">
+                    <div class="text">Логин</div>
+                    <input type="text" class="input_field" title="Login" id="login"></input>
+                </div>
+                <div class="log">
+                    <div class="text">Пароль</div>
+                    <input type="password" class="input_field" title="password" id="passwd"></input>
+                </div>
+            </form>
+            
+           
+            <label class="remember_me">
+                <input type="checkbox"></input>
+                <P>Запомнить меня</P>
+            </label>
+        </div>
+            <div class="page2-main">
+                <form>
+                    <button class="start button" id="reg" onclick="return registration('Page1');">Регистрация</button>
+                </form>
+                <div class="text">Уже зарегистрированы? <a class="link_on_sing_in" href="#" class="sing_in"><b>Войти</b></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="Page1">
+        <div class="main">
+            <div class="container">
+                <p class="subtitle"> и твой подарок<br> найден!</p>
+            </div>
+            <div class="offer">
+                <div class="container">
+                    <div class="page2-main">
+                        <form>
+                            <button class="start button" onclick="return page1('Page2');">Начать</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="Page2">
+        <div class="top">
+            <div class="bg">       
+                <img src="img/SVG/mascat.svg" class="p2mc">
+            </div>
+        </div>
+            <div class="page2-main">
+                <p class="question">Кому ищем подарок?</p>
+                <form>
+                    <div class="wo-or-man">
+                        <label>
+                            <input type="radio" name="gender" value="woman" class="real-radio" id="woman_btn" data="woman">
+                            <div class="fake-radio woman" id ="woman" onclick="return morw('woman', 'man');">
+                                <div class="wrap">
+                                    <p class="wrap-block">Женщине</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="man" class="real-radio" id="man_btn">
+                            <div class="fake-radio man" id="man" onclick="return morw('man', 'woman');">
+                                <div class="wrap">
+                                    <p class="wrap-block">Мужчине</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="points">
+                        <a onclick="return point('Page2', 'Page3', 'Page4');">
+                            <div class="point active"></div>
+                        </a>
+                        <a onclick="return point('Page3', 'Page2', 'Page4');">
+                            <div class="point"></div>
+                        </a>
+                        <a onclick="return point('Page4', 'Page2', 'Page3');">
+                            <div class="point"></div>
+                        </a>
+                    </div>
+                    <button class="farther button" onclick="return page2('Page3');" id = "btnToPage3">Далее</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="Page3">
+        <div class="top">
+                <div class="bg">       
+                    <img src="img/SVG/p3mc.svg" class="p2mc">
+                </div>
+            </div>
+            <div class="page2-main">
+                    <p class="years">Возраст получателя</p>
+                <form>
+                    <input type="number" class="age" min="0" max="120"  id="age">
+                
+                    <div class="points">
+                        <a onclick="return point('Page2', 'Page3', 'Page4');">
+                            <div class="point"></div>
+                        </a>
+                        <a onclick="return point('Page3', 'Page2', 'Page4');">
+                            <div class="point active"></div>
+                        </a>
+                        <a onclick="return point('Page4', 'Page2', 'Page3');">
+                            <div class="point"></div>
+                        </a>
+                    </div>
+                    <button class="farther button" onclick="return page3('Page4');">Далее</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="Page4">
+        <div class="top">
+            <div class="bg">       
+            </div>
+        </div>
+        <div class="page2-main">
+                <p class="quest-budget">Ваш бюджет</p>
+                <form>
+                    <div class="range">
+                        <input type="range" id="budget" class="budget" min="0" max="15000" value="2000" step="200">
+                        <div class="price">
+                            <div class="price-null">
+                                <p>0₽</p>
+                            </div>
+                            <div class="price-max">
+                                <p id="cash">2000₽</p>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        const slideValue = document.getElementById("cash");
+                        const inputSlider = document.getElementById('budget');
+                        inputSlider.oninput = (()=>{
+                            let value = inputSlider.value;
+                            slideValue.textContent = value + '₽';
+                        });
+                    </script>
+                    
+
+                    <div class="points">
+                        <a onclick="return point('Page2', 'Page3', 'Page4');">
+                            <div class="point"></div>
+                        </a>
+                        <a onclick="return point('Page3', 'Page2', 'Page4');">
+                            <div class="point"></div>
+                        </a>
+                        <a onclick="return point('Page4', 'Page2', 'Page3');">
+                            <div class="point active"></div>
+                        </a>
+                    </div>
+                    <button class="farther button" onclick="return page4('choice');">Далее</button>
+                </form>
+        </div>
+    </div>
+
+    <div class="page" id="choice">
+        <div class="top">
+            <div class="bg">       
+            </div>
+        </div>
+        <div class="page2-main">
+            <button class="settings button" onclick="return choice('Page5');">Настроить параметры</button>
+            <p>ИЛИ</p>
+            <button class="wooshbtn button"
+                onclick="return fetchGPTResponse(budgetValue, maleValue, ageValue);">Вжухнуть подарок</button>
+        </div>
+
+        <script>
+            
+          </script>
+
+    </div>
+
+    <div class="page" id="Page5">
+        <div class="container5">
+            <div class="name">
+                <p class="thin">Выбери<br>категорию</p>
+                <p class="bold">для умного<br>поиска</p>
+            </div>
+            <div class="search">
+                <form class="search_box" action="search" method="get">
+                    <input class="search_box_input" type="text" placeholder="поиск" name="query">
+                </form>
+            </div>
+            <div class="filters">
+                <div class="filters_row">
+                    <div class="filters_element">
+                        <form>
+                            <input type="button" id="bithday" class="filters_element element1" value="День рождения">
+                        </form>
+                        <form>
+                            <input type="button" id="new_year" class="filters_element element1" value="Новый год">
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="filters_row">
+                    <div class="filters_element">
+                        <form>
+                            <input type="button" id="girl" class="filters_element element1" value="Девушка">
+                        </form>
+                        <form>
+                            <input type="button" id="partner" class="filters_element element1" value="Супруг">
+                        </form>
+                        <form>
+                            <input type="button" id="wedding" class="filters_element element1" value="Свадьба">
+                        </form>
+                    </div>
+                </div>
+                
+    
+                <div class="filters_row">
+                    <div class="filters_element">
+                        <form>
+                            <input type="button" id="girlfriend" class="filters_element element1" value="Подруга">
+                        </form>
+                        <form>
+                            <input  type="button" id="gift_wrap" class="filters_element element1" value="Подарочная упак.">
+                        </form>
+                    </div>
+                </div>
+                <div class="filters_row">
+                    <div class="filters_element">
+                        <form>
+                            <input type="button" id="unusual" class="filters_element element1" value="Необычный">
+                        </form>
+                        <form>
+                            <input  type="button" id="classmates" class="filters_element element1" value="Одноклассник">
+                        </form>
+                    </div>
+                </div>
+                <div class="filters_row">
+                    <div class="filters_element">
+                        <form>
+                            <input type="button" id="memorable" class="filters_element element1" value="Запоминающийся">
+                        </form>
+                        <form>
+                            <input type="button" id="anniversary" class="filters_element element1" value="Годовщина">
+                        </form>
+                    </div>
+                </div>
+                <div class="filters_row">
+                    <div class="filters_element">
+                        <form>
+                            <input type="button" id="daughter" class="filters_element element1" value="Дочь">
+                        </form>
+                        <form>
+                            <input type="button" id="woman_day" class="filters_element element1" value="8 марта">
+                        </form>
+                        <form>
+                            <input type="button" id="friend" class="filters_element element1" value="Друг">
+                        </form>
+                    </div>
+                </div>
+                <div class="filters_row">
+                    <div class="filters_element">
+                        <form>
+                            <input type="button" id="emotional" class="filters_element element1" value="Эмоциональный">
+                        </form>
+                        <form>
+                            <input type="button" id="useful" class="filters_element element1" value="Полезный">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <button class="farther button" onclick="return page5('Page6');">Далее</button>
+        </div>
+    </div>
+
+    <div class="page" id="Page6">
+        <div class="container">
+            <div class="name">
+                <p class="thin">Добавь<br>пару слов,</p>
+                <p class="bold">если<br>неообходимо</p>
+            </div>
+            <div class="input">
+                <form>
+                    <textarea class="input-text" name="pole_addition" placeholder="Что-нибудь ещё?"></textarea>
+                </form>
+            </div>
+            <button class="wooshbtn button" onclick="return fetchGPTResponse(budgetValue, maleValue, ageValue);">Вжухнуть подарок</button>
+        </div>
+    </div>
+            <!-- <div class="rotateBackground">
+                <img src="img\rotate_bg.png">
+            </div>
+            <div class="search">
+                <div class="icon"></div>
+                <div class="input">
+                    <input type="text" placeholder="Поиск" id="search">
+                </div>
+            </div> -->
+            
+            <div class="page" id="Gifts">
+                <div class="container">
+                    <p class="name">Ваш подарок найден!</p>
+                    <div class="gifts">
+                        <!-- <h2 id="gift_name">Название подарка</h2> -->
+                        <p id="gift_description">Описание подарка</p>
+                    </div>
+                    <button class="wooshbtn" onclick="return page1('Page1');">Вжухнуть еще!</button>
+                </div>
+            </div>
+ 
+    </div>
+    </div>
+    <script src="js\script.js"></script>
+    <script src="js\users.js"></script>
+</body>
+</html>
